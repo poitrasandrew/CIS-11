@@ -108,71 +108,117 @@ b. 4B3 = 1203
 c. 29F = 671
 
   11. What is the 16-bit hexadecimal representation of each of the following signed decimal integers?
-a. -24  = 
-b. -331 = 
+a. -24  = E8
+b. -331 = EB5
 
   12. What is the 16-bit hexadecimal representation of each of the following signed decimal integers?
-a. -21 = 
-b. -45 = 
+a. -21 = EB
+b. -45 = D3
 
   13. The following 16-bit hexadecimal numbers represent signed integers. Convert each to
 decimal.
-a. 6BF9 = 
-b. C123 = 
+a. 6BF9 = 27641
+b. C123 = -16093
 
   14. The following 16-bit hexadecimal numbers represent signed integers. Convert each to
 decimal.
-a. 4CD2 = 
-b. 8230 = 
+a. 4CD2 = 19666
+b. 8230 = -32208
 
   15. What is the decimal representation of each of the following signed binary numbers?
-a. 10110101 = 
+a. 10110101 =-75
 b. 00101010 = 42
 c. 11110000 = -16
 
   16. What is the decimal representation of each of the following signed binary numbers?
-a. 10000000 = 
-b. 11001100 = 
-c. 10110111 = 
+a. 10000000 = -128
+b. 11001100 = -52
+c. 10110111 = -73
 
   17. What is the 8-bit binary (two’s-complement) representation of each of the following signed
 decimal integers?
-a. -5
-b. -42
-c. -16
+a. -5  = 11111011
+b. -42 = 11010110
+c. -16 = 11110000
 
   18. What is the 8-bit binary (two’s-complement) representation of each of the following signed
 decimal integers?
-a. -72
-b. -98
-c. -26
+a. -72 = 10111000
+b. -98 = 10011110
+c. -26 = 11100110
 
   19. What is the sum of each pair of hexadecimal integers?
-a. 6B4 + 3FE
-b. A49 + 6BD
+a. 6B4 + 3FE = AB2
+b. A49 + 6BD = 1106
 
   20. What is the sum of each pair of hexadecimal integers?
-a. 7C4 + 3BE
-b. B69 + 7AD
+a. 7C4 + 3BE = B82
+b. B69 + 7AD = 1316
 
   21. What are the hexadecimal and decimal representations of the ASCII character capital B?
-
+  Hex = 42
+  Dec = 66
+  
   22. What are the hexadecimal and decimal representations of the ASCII character capital G?
-
+  Hex = 47
+  Dec = 71
+  
   25. Create a truth table to show all possible inputs and outputs for the boolean function
 described by ¬(A ∨ B).
-
+ | A | B | ¬(A ∨ B) |
+ | F | F |     T    |
+ | F | T |     F    |
+ | T | F |     F    |
+ | T | T |     F    |
 
 - [ ] 1.7.2 Algorithm Workbench, Choose any 1 question 
+  3. Write a function that receives an integer. The function must return a string containing the
+binary representation of the integer.
+Using C++ :
+
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+void decToBinary(int);
+
+int main() {
+	int value;
+
+	cout << "Enter a non-negative integer value: ";
+	cin >> value;
+	cout << "Decimal " << value << " = ";
+	decToBinary(value);
+	cout << " in binary.\n";
+	return 0;
+}
+
+void decToBinary(int num) {
+	if (num == 0) {
+		cout << "0";
+	}
+	else if (num < 0) {
+		cout << "Invalid Entry";
+	}
+	else if (num > 0) {
+		decToBinary(num / 2);
+		cout << num % 2;
+	}
+}
 
 - [ ] EXTRA CREDIT: 1.4.2 Section Review, Questions 1-5 
   1. Describe the following boolean expression: ¬X ∨ Y.
-
+  (NOT X) OR Y
+  
   2. Describe the following boolean expression: (X ∧ Y).
-
+  X AND Y
+  
   3. What is the value of the boolean expression (T ∧ F) ∨ T ?
+  True
   
   4. What is the value of the boolean expression ¬(F ∨ T) ?
-
-  5. What is the value of the boolean expression ¬F ∨ ¬T ?
+  False
   
+  5. What is the value of the boolean expression ¬F ∨ ¬T ?
+  True
