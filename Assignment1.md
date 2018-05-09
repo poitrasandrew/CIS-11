@@ -1,4 +1,3 @@
-# CIS-11
 - [ ] 1.1.3 Section Review, Questions 1,3, 8, 12
   1. How do assemblers and linkers work together?
   Assemblers change code from assembly to machine languaguage while linkers create executables from the files made by assemblers.
