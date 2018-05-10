@@ -1,0 +1,69 @@
+- [ ] 2.1.5 Section Review, Questions 1,2,3,4 and 5
+  1. The central processor unit (CPU) contains registers and what other basic elements?
+    Clock, control unit, and arithmetic logic unit
+  
+  2. The central processor unit is connected to the rest of the computer system using what three
+buses?
+    Data Bus, control bus, and address bus
+  
+  3. Why does memory access take more machine cycles than register access?
+    Because the registers are on the CPU already while memory needs to be accessed using a bus.
+  
+  4. What are the three basic steps in the instruction execution cycle?
+    Fetch, Decode, and Execute
+  
+  5. Which two additional steps are required in the instruction execution cycle when a memory
+operand is used?
+    Fetching and storing the memory operands
+
+- [ ] 2.4.3 Section Review, Question 5
+  5. What is the purpose of the 8259A PIC controller?
+    It handles external hardware interrupts to interrupt the CPU in order to immediately process their requests.
+    
+- [ ] 2.5.2 Section Review, Questions 1, 3, 4, and 5
+  1. Of the four levels of input/output in a computer system, which is the most universal and
+portable?
+    The application program level
+  
+  3. Why are device drivers necessary, given that the BIOS already has code that communicates
+with the computer’s hardware?
+    The device may be newer than the BIOS and do things that the BIOS wasn't written for.
+    
+  4. In the example regarding displaying a string of characters, which level exists between the
+operating system and the video controller card?
+    BIOS level
+
+  5. Is it likely that the BIOS for a computer running MS-Windows would be different from that
+used by a computer running Linux?
+    No, the BIOS is usually capapble of working with multiple operating systems so that the user can install whichever OS that they want without changing the BIOS.
+
+- [ ] 2.8 Review Question 7, 8, 9, 10, 12, 19, 20, 25, and 26
+  7. Which part of the CPU performs floating-point arithmetic?
+    Floating point unit
+  
+  8. On a 32-bit processor, how many bits are contained in each floating-point data register?
+     80
+     
+  9. (True/False): The x86-64 instruction set is backward-compatible with the x86 instruction set.
+    True
+    
+  10. (True/False): In current 64-bit chip implementations, all 64 bits are used for addressing.
+    False
+    
+  12. (True/False): Static RAM is usually less expensive than dynamic RAM.
+    False
+    
+  19. (True/False): A bus is a plastic cable that is attached to the motherboard at both ends, but
+does not sit directly on the motherboard.
+    False
+    
+  20. (True/False): CMOS RAM is the same as static RAM, meaning that it holds its value without
+any extra power or refresh cycles.
+    False
+    
+  25. At which level(s) can an assembly language program manipulate input/output?
+    All levels (Application program, OS, BIOS, and hardware)
+  
+  26. Why do game programs often send their sound output directly to the sound card’s hardware
+ports?
+    It executes as quickly as possible and allows game devs to use special features of different sound cards.
