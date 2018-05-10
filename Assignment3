@@ -1,0 +1,111 @@
+- [ ] 3.1.11 Section Review, Questions 1, 2, 3, 4
+  1. Using the value –35, write it as an integer literal in decimal, hexadecimal, octal, and binary
+formats that are consistent with MASM syntax.
+    Dec: -35d
+    Hex: 0DDh
+    Oct: 335o
+    Bin: 11011101b
+    
+  2. (Yes/No): Is A5h a valid hexadecimal literal?
+    No
+    
+  3. (Yes/No): Does the multiplication operator (*) have a higher precedence than the division
+operator (/) in integer expressions?
+    No
+    
+  4. Create a single integer expression that uses all the operators from Section 3.1.2. Calculate
+the value of the expression.
+    16 MOD 5 + (4 - 2) * (6 / 3) = 5
+    
+- [ ] 3.2.4 Section Review, Questions 4, 5
+  4. In the AddTwo program, which register holds the sum?
+    eax
+    
+  5. In the AddTwo program, which statement halts the program?
+    INVOKE ExitProcess,0
+    
+- [ ] 3.3.3 Section Review, Questions 1, 2, 3, 4
+  1. What types of files are produced by the assembler?
+    Object Files and Listing Files
+    
+  2. (True/False): The linker extracts assembled procedures from the link library and inserts
+them in the executable program.
+    True
+    
+  3. (True/False): When a program’s source code is modified, it must be assembled and linked
+again before it can be executed with the changes.
+    True
+    
+  4. Which operating system component reads and executes programs?
+    Loader
+  
+- [ ] 3.4.13 Section Review, Questions 1, 2, 3, 4, 5
+  1. Create an uninitialized data declaration for a 16-bit signed integer.
+      num1 SWORD ?
+      
+  2. Create an uninitialized data declaration for an 8-bit unsigned integer.
+      num2 BYTE ?
+      
+  3. Create an uninitialized data declaration for an 8-bit signed integer.
+      num3 SBYTE?
+      
+  4. Create an uninitialized data declaration for a 64-bit integer.
+      num4 QWORD ?
+     
+  5. Which data type can hold a 32-bit signed integer?
+      SDWORD
+      
+- [ ] 3.5.5 Section Review Question 3
+  3. Write a statement that causes the assembler to calculate the number of bytes in the following
+array, and assign the value to a symbolic constant named ArraySize:
+myArray WORD 20 DUP(?)
+    ArraySize = ($ - myArray)
+    
+- [ ] 3.9.1 Short Answer, Questions 4, 5, 6, 25
+  4. Explain why the term assembler language is not quite correct.
+    There are various assemblers and this book focuses on the Microsoft MASM assembler only.
+  
+  5. Explain the difference between big endian and little endian. Also, look up the origins of this
+term on the Web.
+    Big endian stores the most significant bit first and little endian stores the least significant bit first. The endian terms come from Gulliver's Travels with a civil war erupting based on cracking open eggs from the big or little end.
+    
+  6. Why might you use a symbolic constant rather than an integer literal in your code?
+    It makes programs easier to read and maintain, such as changing a constant used multiple times by setting the symbol to a new value rather than searching for the value and changing it at each point that it is used.
+  
+  25. Which data directive creates a 32-bit signed integer variable?
+      SDWORD
+      
+- [ ] 3.9.2 Algorithm Workbench, Questions 4, 7, 13
+  4. Find out if you can declare a variable of type DWORD and assign it a negative
+value. What does this tell you about the assembler’s type checking?
+    It compiles and shows that the assembler doesn't type check but the value will be the 2's compliment of the absolute value of the negative number.
+
+  7. Declare an array of 120 uninitialized unsigned doubleword values
+    array DWORD 120 DUP(?)
+  
+  13. Declare a string variable containing the word “TEST” repeated 500 times.
+    test BYTE 500 DUP("TEST")
+  
+- [ ] 3.10 Programming Exercises, Pick any 1 exercise
+  1. Integer Expression Calculation
+Using the AddTwo program from Section 3.2 as a reference, write a program that calculates the
+following expression, using registers: A = (A + B) − (C + D). Assign integer values to the EAX,
+EBX, ECX, and EDX registers.
+    
+ExitProcess proto
+.data
+.code
+main proc
+   mov  eax,230
+   mov  ebx,153
+   mov  ecx,42
+   mov  edx,69
+
+   add  eax,ebx
+   add  ecx,edx
+
+   sub  eax,ecx
+
+   call ExitProcess
+main endp
+end
