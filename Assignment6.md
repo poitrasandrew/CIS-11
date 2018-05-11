@@ -1,2 +1,0 @@
-- [ ] 5.9 Programming Exercises, Questions 10   
-- [ ] 5.9 Programming Exercises, Question 7 (You will need to do this in 32 bit) OR Write a program that uses the Random64 function from the Irvine64 library
