@@ -1,3 +1,5 @@
+;Author: Andrew Poitras
+
 - [ ] 3.1.11 Section Review, Questions 1, 2, 3, 4
   1. Using the value –35, write it as an integer literal in decimal, hexadecimal, octal, and binary
 formats that are consistent with MASM syntax.
