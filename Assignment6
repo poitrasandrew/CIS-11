@@ -44,3 +44,49 @@ end
 Write a program that displays a single character at 100 random screen locations, using a timing
 delay of 100 milliseconds. Hint: Use the GetMaxXY procedure to determine the current size of
 the console window.
+
+; Random Screen Locations 5.9 #7
+
+.386
+.model flat,stdcall
+.stack 4096
+ExitProcess proto,dwExitCode:dword
+GetMaxXY proto
+RandomRange proto
+Gotoxy proto
+WriteChar proto
+Delay proto
+.data
+	rows BYTE ?
+	cols BYTE ?
+.code
+main proc
+	mov ecx,100
+
+	call GetMaxXY
+	mov rows,al
+	mov cols,dl
+
+L1:
+	mov eax,0
+	mov al,rows
+	call RandomRange
+	mov dh,al
+
+	mov eax,0
+	mov al,cols
+	call RandomRange
+	mov dl,al
+	
+	call Gotoxy
+	
+	mov al,'X'
+	call WriteChar
+
+	mov eax,100
+	call Delay	
+	loop L1			
+
+	invoke ExitProcess,0
+main endp
+end main
