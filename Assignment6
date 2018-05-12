@@ -1,3 +1,5 @@
+; Author: Andrew Poitras
+
 - [ ] 5.9 Programming Exercises, Questions 10   
 10. Fibonacci Generator
 Write a procedure that produces N values in the Fibonacci number series and stores them in an
@@ -5,6 +7,37 @@ array of doubleword. Input parameters should be a pointer to an array of doublew
 counter of the number of values to generate. Write a test program that calls your procedure,
 passing N = 47. The first value in the array will be 1, and the last value will be 2,971,215,073.
 Use the Visual Studio debugger to open and inspect the array contents.
+
+; Fibonacci Generator 5.9 #10
+
+ExitProcess proto
+.data
+	array DWORD 47 DUP(0)
+	N DWORD 47
+.code
+main proc
+   mov edx,offset array
+   mov eax,0
+   mov ebx,1
+   mov ecx,N
+   call fib
+
+   call ExitProcess
+main endp
+
+fib proc
+	@A:
+	mov DWORD PTR [edx],ebx
+	mov esi,ebx
+	add ebx,eax
+	mov eax,esi
+	add edx,4
+	sub ecx,1
+	jnz @A
+
+	ret
+fib endp
+end
 
 - [ ] 5.9 Programming Exercises, Question 7 (You will need to do this in 32 bit) OR Write a program that uses the Random64 function from the Irvine64 library
 7. Random Screen Locations
