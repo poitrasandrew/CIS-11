@@ -4,7 +4,6 @@
 ExitProcess proto
 .data
 	array BYTE 10h, 20h, 30h, 40h, 50h, 60h, 70h, 80h
-	index BYTE 0
 .code
 main proc
 	mov esi, OFFSET array
