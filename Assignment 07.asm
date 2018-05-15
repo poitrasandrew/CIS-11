@@ -1,5 +1,6 @@
 ;Author: Andrew Poitras
 ;Assignment 7 6.11.2 #5 & 6  Boolean Calculator
+;Uses Irving 32 Library
 
 .386
 .model flat,stdcall
