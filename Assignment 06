@@ -46,6 +46,7 @@ delay of 100 milliseconds. Hint: Use the GetMaxXY procedure to determine the cur
 the console window.
 
 ; Random Screen Locations 5.9 #7
+; Uses Irving32 library
 
 .386
 .model flat,stdcall
